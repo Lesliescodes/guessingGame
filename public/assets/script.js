@@ -1,8 +1,11 @@
-function checkGuess() {
-    const inputElement = document.getElementById('guess');
-    let randomNumber = Math.floor(Math.random() * 100) + 1;
-    let guess = inputElement.value;
-    const feedbackElement = document.getElementById('feedback');
+  let randomNumber = Math.floor(Math.random() * 100) + 1;
+  let guess = inputElement.value;
+  let attempts = 10;
+
+  function checkGuess() {
+ const inputElement = document.getElementById('guess');
+  const feedbackElement = document.getElementById('feedback');
+  const guess = inputElement.value;
     if (guess == randomNumber) {
         feedbackElement.innerHTML = 'Congratulations! You have successfully guessed the number!';
         feedbackElement.style.color = 'green';  
@@ -13,3 +16,4 @@ function checkGuess() {
             feedbackElement.style.color = 'red'; }
         
         }
+        
